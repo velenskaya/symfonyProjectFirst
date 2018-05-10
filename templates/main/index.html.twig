@@ -9,7 +9,7 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1>Hello {% if test == 'test' %}{{ controller_name }} Novosti {% endif %}! ✅</h1>
 
     This friendly message is coming from:
     <ul>
@@ -17,4 +17,7 @@
         <li>Your template at <code><a href="{{ 'templates/main/index.html.twig'|file_link(0) }}">templates/main/index.html.twig</a></code></li>
     </ul>
 </div>
+{% endblock %}
+
+{% block javascript %}
 {% endblock %}
