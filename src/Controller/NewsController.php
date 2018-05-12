@@ -19,7 +19,7 @@ class NewsController extends Controller
     /**
      * @Route("/article/{id}", name="article")
      */
-    public function article($id)
+    public function article($id = 13)
     {
         return $this->render('news/article.html.twig', [
             'controller_name' => 'NewsController',

@@ -11,6 +11,7 @@
     {% endblock %}
 
     <title>{% block title %}Business Casual - Start Bootstrap Theme{% endblock %}</title>
+
         {% block stylesheets %}
             <!-- Bootstrap Core CSS -->
             <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -26,12 +27,13 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
             <![endif]-->
         {% endblock %}
+
     </head>
     <body>
         {% block body %}
             <div class="brand">Business Casual</div>
             <div class="address-bar">3481 Melrose Place | Beverly Hills, CA 90210 | 123.456.7890</div>
-
+        {% block Navigation %}
             <!-- Navigation -->
             <nav class="navbar navbar-default" role="navigation">
                 <div class="container">
@@ -149,8 +151,11 @@
 
             </div>
             <!-- /.container -->
+        {% endblock %}
+
 
             <footer>
+                {% block footer %}
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 text-center">
@@ -158,9 +163,11 @@
                         </div>
                     </div>
                 </div>
+                {% endblock %}
             </footer>
 
-        {% endblock %}
+
+
         {% block javascripts %}
             <!-- jQuery -->
             <script src="js/jquery.js"></script>
