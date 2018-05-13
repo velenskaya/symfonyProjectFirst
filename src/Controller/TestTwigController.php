@@ -8,7 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class TestTwigController extends Controller
 {
     /**
-     * @Route("/test/twig", name="test_twig")
+     * @Route("/twig", name="test_twig")
      */
     public function index()
     {
