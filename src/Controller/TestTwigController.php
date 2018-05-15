@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use http\Env\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -16,4 +17,13 @@ class TestTwigController extends Controller
             'controller_name' => 'TestTwigController',
         ]);
     }
+
+    /**
+     * @Route("/news/why-asteroids-test", name="test_twig")
+     */
+    public function news()
+    {
+        return new Response('тест пройден');
+    }
+
 }
