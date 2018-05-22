@@ -29,7 +29,7 @@ class MainController extends Controller
         //$posts = $postRepository-> findAll();
 
         $posts = $this->getDoctrine()->getRepository(Post::class)->findAll();
-        dump($posts);
+        //dump($posts);
         return $this->render('main/blog.html.twig.', compact('posts'));
     }
 

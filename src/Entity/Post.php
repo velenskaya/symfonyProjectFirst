@@ -31,6 +31,16 @@ class Post
      */
     private $created_at;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="posts")
+     */
+    private $category;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Tag", inversedBy="posts")
+     */
+    private $tags;
+
     public function getId()
     {
         return $this->id;
@@ -68,6 +78,30 @@ class Post
     public function setCreatedAt(\DateTimeInterface $created_at): self
     {
         $this->created_at = $created_at;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    public function getTags(): ?Tag
+    {
+        return $this->tags;
+    }
+
+    public function setTags(?Tag $tags): self
+    {
+        $this->tags = $tags;
 
         return $this;
     }
